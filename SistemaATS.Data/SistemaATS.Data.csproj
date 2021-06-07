@@ -4,10 +4,4 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Folder Include="Configurations\" />
-    <Folder Include="Context\" />
-    <Folder Include="Repositories\" />
-  </ItemGroup>
-
 </Project>
