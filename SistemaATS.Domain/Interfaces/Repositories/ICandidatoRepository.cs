@@ -3,8 +3,9 @@ using System.Collections.Generic;
 
 namespace SistemaATS.Domain.Interfaces.Repositories
 {
-    public interface ICandidatoRepository
+    public interface ICandidatoRepository : IBaseRepository<Candidato>
     {
-        IEnumerable<Candidato> GetAll();
+        IEnumerable<Candidato> ListAll(); 
+
     }
 }

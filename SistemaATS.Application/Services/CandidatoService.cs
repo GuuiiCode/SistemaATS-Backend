@@ -2,6 +2,7 @@
 using SistemaATS.Application.ViewModels;
 using SistemaATS.Domain.Entities;
 using SistemaATS.Domain.Interfaces.Repositories;
+using System;
 using System.Collections.Generic;
 
 namespace SistemaATS.Application.Services
@@ -35,6 +36,22 @@ namespace SistemaATS.Application.Services
             }
 
             return candidatoViewModels;
+        }
+
+        public bool Post(CandidatoViewModel candidatoViewModel)
+        {
+            Candidato candidato = new Candidato
+            { 
+                nome = candidatoViewModel.Nome,
+                email = candidatoViewModel.Email,
+                telefone = candidatoViewModel.Telefone,
+                genero = candidatoViewModel.Genero,
+                data_nascimento = DateTime.Parse(candidatoViewModel.DataNascimento)
+            };
+
+            _candidatoRepository.Add(candidato);
+
+            return true;
         }
     }
 }

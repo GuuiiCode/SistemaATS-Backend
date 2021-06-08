@@ -6,5 +6,6 @@ namespace SistemaATS.Application.Interfaces.IServices
     public interface ICandidatoService
     {
         List<CandidatoViewModel> GetAll();
+        bool Post(CandidatoViewModel candidatoViewModel);
     }
 }

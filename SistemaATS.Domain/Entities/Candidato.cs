@@ -9,8 +9,8 @@ namespace SistemaATS.Domain.Entities
         public string telefone { get; set; }
         public string genero { get; set; }
         public DateTime data_nascimento { get; set; }
-        public int endereco_id { get; set; }
+        //public int endereco_id { get; set; }
 
-        public Endereco endereco_tb { get; set; }
+        //public Endereco endereco_tb { get; set; }
     }
 }

@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SistemaATS.Data.Context;
 
 namespace SistemaATS.Data.Migrations
 {
     [DbContext(typeof(ATSContext))]
-    partial class ATSContextModelSnapshot : ModelSnapshot
+    [Migration("20210608060708_Exclusão da entidade endereco")]
+    partial class Exclusãodaentidadeendereco
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

@@ -10,9 +10,9 @@ namespace SistemaATS.Data.Repositories
         public CandidatoRepository(ATSContext context)
             : base(context) { }
 
-        public IEnumerable<Candidato> GetAll()
+        public IEnumerable<Candidato> ListAll()
         {
-            return base.GetAll();
+            return GetAll();
         }
     }
 }

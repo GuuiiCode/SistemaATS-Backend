@@ -57,7 +57,7 @@ namespace SistemaATS.Data.Repositories
 
         public void Dispose()
         {
-            throw new NotImplementedException();
+            Context.Dispose();
         }
 
     }

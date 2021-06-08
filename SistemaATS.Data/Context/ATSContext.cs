@@ -10,12 +10,12 @@ namespace SistemaATS.Data.Context
             : base(options) { }
 
         public DbSet<Candidato> Candidatos { get; set; }
-        public DbSet<Endereco> Enderecos { get; set; }
+        //public DbSet<Endereco> Enderecos { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfiguration(new CandidatoConfiguration());
-            modelBuilder.ApplyConfiguration(new EnderecoConfiguration());
+            //modelBuilder.ApplyConfiguration(new EnderecoConfiguration());
 
             base.OnModelCreating(modelBuilder);
         }

@@ -30,9 +30,9 @@ namespace SistemaATS.Data.Configuration
                   .HasColumnType("datetime")
                   .IsRequired();
 
-            entity.HasOne(e => e.endereco_tb)
-                  .WithMany(e => e.candidato_tb)
-                  .HasForeignKey(f => f.endereco_id);
+            //entity.HasOne(e => e.endereco_tb)
+            //      .WithMany(e => e.candidato_tb)
+            //      .HasForeignKey(f => f.endereco_id);
 
         }
     }
