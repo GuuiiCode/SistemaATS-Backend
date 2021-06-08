@@ -5,6 +5,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using SistemaATS.Data.Context;
+using SistemaATS.DryIoc;
 
 namespace SistemaATS.WebApi
 {
@@ -23,6 +24,8 @@ namespace SistemaATS.WebApi
             services.AddControllers();
 
             services.AddDbContext<ATSContext>(option => option.UseSqlServer(Configuration.GetConnectionString("ATSContext")));
+
+            InjectionDependencies.RegisterServices(services);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

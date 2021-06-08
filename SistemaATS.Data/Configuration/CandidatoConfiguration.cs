@@ -4,9 +4,9 @@ using SistemaATS.Domain.Entities;
 
 namespace SistemaATS.Data.Configuration
 {
-    public class CandidatoConfiguration : IEntityTypeConfiguration<candidato_tb>
+    public class CandidatoConfiguration : IEntityTypeConfiguration<Candidato>
     {
-        public void Configure(EntityTypeBuilder<candidato_tb> entity)
+        public void Configure(EntityTypeBuilder<Candidato> entity)
         {
             entity.HasKey(e => e.id);
 

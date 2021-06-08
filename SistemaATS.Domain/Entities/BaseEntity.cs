@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace SistemaATS.Domain.Entities
+﻿namespace SistemaATS.Domain.Entities
 {
     public abstract class BaseEntity<TEntity>
     {

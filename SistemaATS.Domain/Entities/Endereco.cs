@@ -2,7 +2,7 @@
 
 namespace SistemaATS.Domain.Entities
 {
-    public class endereco_tb : BaseEntity<int>
+    public class Endereco : BaseEntity<int>
     {
         public string rua { get; set; }
         public string bairro { get; set; }
@@ -10,6 +10,6 @@ namespace SistemaATS.Domain.Entities
         public string estado { get; set; }
         public string cep { get; set; }
         
-        public ICollection<candidato_tb> candidato_tb { get; set; }
+        public ICollection<Candidato> candidato_tb { get; set; }
     }
 }

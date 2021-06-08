@@ -12,7 +12,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\SistemaATS.Application\SistemaATS.Application.csproj" />
     <ProjectReference Include="..\SistemaATS.Data\SistemaATS.Data.csproj" />
+    <ProjectReference Include="..\SistemaATS.DryIoc\SistemaATS.DryIoc.csproj" />
   </ItemGroup>
 
 

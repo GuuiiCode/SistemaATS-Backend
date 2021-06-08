@@ -2,7 +2,7 @@
 
 namespace SistemaATS.Domain.Entities
 {
-    public class candidato_tb : BaseEntity<int>
+    public class Candidato : BaseEntity<int>
     {
         public string nome { get; set; }
         public string email { get; set; }
@@ -11,6 +11,6 @@ namespace SistemaATS.Domain.Entities
         public DateTime data_nascimento { get; set; }
         public int endereco_id { get; set; }
 
-        public endereco_tb endereco_tb { get; set; }
+        public Endereco endereco_tb { get; set; }
     }
 }

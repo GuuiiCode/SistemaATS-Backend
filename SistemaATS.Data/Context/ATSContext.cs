@@ -9,8 +9,8 @@ namespace SistemaATS.Data.Context
         public ATSContext(DbContextOptions<ATSContext> options)
             : base(options) { }
 
-        public DbSet<candidato_tb> Candidatos { get; set; }
-        public DbSet<endereco_tb> Enderecos { get; set; }
+        public DbSet<Candidato> Candidatos { get; set; }
+        public DbSet<Endereco> Enderecos { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

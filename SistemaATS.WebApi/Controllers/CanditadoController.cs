@@ -1,16 +1,23 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using SistemaATS.Application.Interfaces.IServices;
 
 namespace SistemaATS.WebApi.Controllers
 {
-    public class CanditadoController : Controller
+    [Route("api/candidato")]
+    [ApiController]
+    public class CanditadoController : ControllerBase
     {
-        public IActionResult Index()
+        private readonly ICandidatoService _candidatoService;
+
+        public CanditadoController(ICandidatoService candidatoService)
         {
-            return View();
+            _candidatoService = candidatoService;
+        }
+
+        [HttpGet]
+        public IActionResult GetAll()
+        { 
+            return Ok(_candidatoService.GetAll());
         }
     }
 }

@@ -4,9 +4,9 @@ using SistemaATS.Domain.Entities;
 
 namespace SistemaATS.Data.Configuration
 {
-    public class EnderecoConfiguration : IEntityTypeConfiguration<endereco_tb>
+    public class EnderecoConfiguration : IEntityTypeConfiguration<Endereco>
     {
-        public void Configure(EntityTypeBuilder<endereco_tb> entity)
+        public void Configure(EntityTypeBuilder<Endereco> entity)
         {
             entity.HasKey(e => e.id);
 
