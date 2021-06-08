@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using SistemaATS.Application.AutoMapper;
 using SistemaATS.Data.Context;
 using SistemaATS.DryIoc;
 
@@ -26,6 +27,8 @@ namespace SistemaATS.WebApi
             services.AddDbContext<ATSContext>(option => option.UseSqlServer(Configuration.GetConnectionString("ATSContext")));
 
             InjectionDependencies.RegisterServices(services);
+
+            services.AddAutoMapper(typeof(AutoMapperSetup));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
