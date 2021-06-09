@@ -7,6 +7,7 @@ using Microsoft.Extensions.Hosting;
 using SistemaATS.Application.AutoMapper;
 using SistemaATS.Data.Context;
 using SistemaATS.DryIoc;
+using SistemaATS.Swagger;
 
 namespace SistemaATS.WebApi
 {
@@ -29,6 +30,8 @@ namespace SistemaATS.WebApi
             InjectionDependencies.RegisterServices(services);
 
             services.AddAutoMapper(typeof(AutoMapperSetup));
+
+            services.AddSwaggerConfiguration();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -38,6 +41,8 @@ namespace SistemaATS.WebApi
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.UserSwaggerConfiguration();
 
             app.UseHttpsRedirection();
 

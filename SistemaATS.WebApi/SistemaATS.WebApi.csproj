@@ -1,7 +1,11 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>SistemaATS.WebApi.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
@@ -15,6 +19,7 @@
     <ProjectReference Include="..\SistemaATS.Application\SistemaATS.Application.csproj" />
     <ProjectReference Include="..\SistemaATS.Data\SistemaATS.Data.csproj" />
     <ProjectReference Include="..\SistemaATS.DryIoc\SistemaATS.DryIoc.csproj" />
+    <ProjectReference Include="..\SistemaATS.Swagger\SistemaATS.Swagger.csproj" />
   </ItemGroup>
 
 
