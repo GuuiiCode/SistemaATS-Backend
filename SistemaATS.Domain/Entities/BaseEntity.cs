@@ -7,6 +7,6 @@
             Id = id;
         }
 
-        public virtual TEntity id { get; }
+        public virtual TEntity id { get; set; }
     }
 }

@@ -7,5 +7,8 @@ namespace SistemaATS.Application.Interfaces.IServices
     {
         List<CandidatoViewModel> GetAll();
         bool Post(CandidatoViewModel candidatoViewModel);
+        CandidatoViewModel GetById(int id);
+        bool Put(CandidatoViewModel candidatoViewModel);
+        bool Delete(int id);
     }
 }

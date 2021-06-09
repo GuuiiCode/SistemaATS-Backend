@@ -3,6 +3,7 @@ using SistemaATS.Domain.Interfaces.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 
 namespace SistemaATS.Data.Repositories
 {
@@ -19,46 +20,119 @@ namespace SistemaATS.Data.Repositories
 
         public int Commit()
         {
-            return Context.SaveChanges();
+            try
+            {
+                return Context.SaveChanges();
+            }
+            catch(Exception)
+            {
+                throw;
+            }
         }
 
         public void Add(TEntity obj)
         {
-            Set.Add(obj);
-            Commit();
+            try
+            {
+                Set.Add(obj);
+                Commit();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
         }
 
         public void Add(IEnumerable<TEntity> obj)
         {
-            Set.AddRange(obj);
-            Commit();
+            try
+            {
+                Set.AddRange(obj);
+                Commit();
+            }
+            catch (Exception)
+            {
+                throw;
+            } 
         }
 
         public IEnumerable<TEntity> GetAll()
         {
-            return Set.ToList();
+            try
+            {
+                return Set.ToList();
+            }
+            catch (Exception)
+            {
+                throw;
+            } 
         }
 
         public TEntity GetById(int id)
         {
-            return Set.Find(id);
+            try
+            {
+                return Set.Find(id);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        public TEntity GetById(Expression<Func<TEntity, bool>> where)
+        {
+            try
+            {
+                return Set.AsNoTracking().FirstOrDefault(where);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
 
         public void Remove(TEntity obj)
         {
-            Set.Remove(obj);
+            try
+            {
+                Set.Remove(obj);
+                Commit();
+            }
+            catch (Exception)
+            {
+                throw;
+            } 
         }
 
         public void Update(TEntity obj)
         {
-            Context.Entry(obj).State = EntityState.Modified;
-            Commit();
+            try
+            {
+                Context.Entry(obj).State = EntityState.Modified;
+                Commit(); 
+            }
+            catch (Exception)
+            {
+                throw;
+            } 
         }
 
         public void Dispose()
         {
-            Context.Dispose();
-        }
+            try
+            {
+                if (Context != null)
+                    Context.Dispose();
+
+                GC.SuppressFinalize(this);
+            }
+            catch (Exception)
+            {
+                throw;
+            } 
+        } 
 
     }
 }
