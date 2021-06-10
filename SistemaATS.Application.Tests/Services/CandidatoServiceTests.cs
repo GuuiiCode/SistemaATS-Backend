@@ -69,21 +69,29 @@ namespace SistemaATS.Application.Tests.Services
         [Fact]
         public void Get_ValidandoObjeto()
         {
+            //Criando uma lista de objeto para que seja retornado pelo repository
             var candidatos = new List<Candidato>();
             candidatos.Add(new Candidato 
             { 
                 id = 9999, nome = "Guilherme", email = "guilherme@gmail.com", telefone = "915975369", data_nascimento = Convert.ToDateTime("05/05/1984"), genero = "M" 
             });
 
+            //Criando um objeto mock do UserRepository e configurando para retornar a lista criada anteriormente e chamar o método GetAll()
             var candidatoRepository = new Mock<ICandidatoRepository>();
             candidatoRepository.Setup(x => x.GetAll()).Returns(candidatos);
-             
+
+            //Criando um objeto mock do AutoMapper para converter o retorno para o tipo List<CandidatoViewModel>()
             var autoMapper = new AutoMapperSetup();
             var configuration = new MapperConfiguration(x => x.AddProfile(autoMapper));
             var mapper = new Mapper(configuration);
 
+            //Instanciando a classe de serviço novamente com os novos objetos mocks criados
             _candidatoService = new CandidatoService(candidatoRepository.Object, mapper);
+
+            //Obtendo os valores do método GetAll para validar se vai retornar o objeto criado acima.
             var result = _candidatoService.GetAll();
+
+            //Validando se o retorno contém uma lista com objetos.
             Assert.True(result.Count > 0);
         }
 
