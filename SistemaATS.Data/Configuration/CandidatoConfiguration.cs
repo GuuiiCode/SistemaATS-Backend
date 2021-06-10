@@ -18,6 +18,9 @@ namespace SistemaATS.Data.Configuration
                   .HasMaxLength(150)
                   .IsRequired();
 
+            entity.HasIndex(e => e.email)
+                  .IsUnique();
+
             entity.Property(e => e.telefone)
                   .HasMaxLength(17)
                   .IsRequired();

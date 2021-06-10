@@ -27,6 +27,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SistemaATS.DryIoc", "Sistem
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SistemaATS.Swagger", "SistemaATS.Swagger\SistemaATS.Swagger.csproj", "{D7775247-059B-4AA6-B42A-81F36D4AD867}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0 - Tests", "0 - Tests", "{350C547B-4660-4D64-AE20-07CC1479FD18}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SistemaATS.Application.Tests", "SistemaATS.Application.Tests\SistemaATS.Application.Tests.csproj", "{F2B32D3B-EB22-4D17-8C23-4B6DBCC203E8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +61,10 @@ Global
 		{D7775247-059B-4AA6-B42A-81F36D4AD867}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D7775247-059B-4AA6-B42A-81F36D4AD867}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D7775247-059B-4AA6-B42A-81F36D4AD867}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F2B32D3B-EB22-4D17-8C23-4B6DBCC203E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2B32D3B-EB22-4D17-8C23-4B6DBCC203E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2B32D3B-EB22-4D17-8C23-4B6DBCC203E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2B32D3B-EB22-4D17-8C23-4B6DBCC203E8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -70,6 +78,7 @@ Global
 		{BD217FD2-8142-479D-8E7B-BF0E7AF97DBD} = {EF775484-676B-4F3B-8BE6-CA729878C37E}
 		{078EE5FF-F1BF-488E-9DE7-E0A818638CA4} = {BD217FD2-8142-479D-8E7B-BF0E7AF97DBD}
 		{D7775247-059B-4AA6-B42A-81F36D4AD867} = {BD217FD2-8142-479D-8E7B-BF0E7AF97DBD}
+		{F2B32D3B-EB22-4D17-8C23-4B6DBCC203E8} = {350C547B-4660-4D64-AE20-07CC1479FD18}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7140A3E1-E03A-4A68-9F4C-041F049C9C10}

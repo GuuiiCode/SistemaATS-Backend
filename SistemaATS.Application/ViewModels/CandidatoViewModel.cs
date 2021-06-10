@@ -11,6 +11,7 @@ namespace SistemaATS.Application.ViewModels
         [MaxLength(100, ErrorMessage = "Máximo {0} caracteres")]
         public string Nome { get; set; }
 
+        [Required(ErrorMessage = "Preencha o campo Email")]
         [EmailAddress(ErrorMessage = "Preencha um E-mail válido")]
         public string Email { get; set; }
 

@@ -30,6 +30,9 @@ namespace SistemaATS.WebApi.Controllers.v1
         [HttpPost]
         public IActionResult Post(CandidatoViewModel candidatoViewModel)
         {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
             return Ok(_candidatoService.Post(candidatoViewModel));
         }
 
