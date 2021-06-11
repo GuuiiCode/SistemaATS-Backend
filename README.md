@@ -6,7 +6,7 @@ ATS é uma sigla que tem origem do termo em inglês _Applicant Tracking System_ 
 **[Link do repositório front-end](https://github.com/GuuiiCode/SistemaATS-Frontend)**
 ##
 
-# Aplicação em .NET Core
+# Aplicação em .NET Core versão 3.1
 Para rodar a aplicação em sua maquina será necessário seguir as seguintes etapas:
 
  1. Criar um Banco de Dados chamado ***ATS***.
