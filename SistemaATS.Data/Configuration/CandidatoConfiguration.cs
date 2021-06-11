@@ -22,11 +22,11 @@ namespace SistemaATS.Data.Configuration
                   .IsUnique();
 
             entity.Property(e => e.telefone)
-                  .HasMaxLength(17)
+                  .HasMaxLength(14)
                   .IsRequired();
 
             entity.Property(e => e.genero)
-                  .HasMaxLength(1)
+                  .HasMaxLength(9)
                   .IsRequired();
 
             entity.Property(e => e.data_nascimento)
